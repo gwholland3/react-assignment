@@ -15,7 +15,7 @@ function MyApp() {
 
     function updateList(person) {
         makePostCall(person).then(result => {
-            if (result)
+            if (result.data.status_code == 201)
                 setCharacters([...characters, person]);
         });
     }
